@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>User Counter</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-minimal.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 		<link
 			href="https://db.onlinewebfonts.com/c/0f26b3e18150776f5ced203524ea7573?family=HanleyPro-Sans"
@@ -12,8 +13,9 @@
 	<body>
 		<div class="background"></div>
 		<div class="user-count-container">
-			<span id="userCount" class="user-count">0</span>
+			<span id="userCount" class="user-count odometer">0</span>
 		</div>
 		<script type="module" src="js/race-roster.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/odometer@0.4.8/odometer.js"></script>
 	</body>
 </html>

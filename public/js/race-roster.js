@@ -1,5 +1,12 @@
 const userCountElement = document.getElementById("userCount");
 
+// Initialize Odometer
+const odometer = new Odometer({
+	el: userCountElement,
+	format: "(,ddd)",
+	theme: "minimal",
+});
+
 async function fetchTotalParticipants() {
 	try {
 		const response = await fetch("/getTotalParticipants", {
@@ -21,13 +28,13 @@ async function fetchTotalParticipants() {
 
 async function updateUserCount() {
 	const totalResults = await fetchTotalParticipants();
-	const formattedResults = totalResults.toLocaleString();
-	userCountElement.textContent = formattedResults;
+	console.log("new.");
+	odometer.update(totalResults);
 }
 
 async function main() {
 	await updateUserCount();
-	setInterval(updateUserCount, 30000); //every 30 seconds. time in milliseconds
+	setInterval(updateUserCount, 30000); // every 30 seconds. time in milliseconds
 }
 
 main();
