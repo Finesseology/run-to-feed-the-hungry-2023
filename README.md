@@ -11,7 +11,7 @@ This program is a Node.js project that creates a simple webpage and updates the 
 ### Dependencies
 
 -   This was developed on Node.js v18.14.2
--   This was developed on Devian 12
+-   This was developed on Debian 12
 
 ### Executing program
 
